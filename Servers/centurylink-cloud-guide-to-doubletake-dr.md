@@ -24,7 +24,7 @@
 * [Support](#support)
 
 ### Overview
-Double-Take DR allows customer to have a DR environment setup with a few easy steps. By utilizing the Blueprint created by Vision Solutions in CenturyLink Cloud, this further simplifies the deployment process.
+Double-Take DR allows customer to have a DR environment setup with a few easy steps. By utilizing the Vision Solutions created Blueprint in CenturyLink Cloud, this further simplifies the deployment process.
 
 Before deploying any software, a DR plan needs to be in place. Depending on the business requirement, the server can be mirrored and replicated from on premise infrastructure to CenturyLink Cloud, CenturyLink Cloud to CenturyLink Cloud or CenturyLink Cloud to another location. In this walk through, a one to one scenario is used for the Double-Take DR for Windows, which can be expanded to many to many. For detail of the products, please see [Vision Solutions website](//www.visionsolutions.com/products/windows/double-take-dr/overview).
 
@@ -226,45 +226,45 @@ Similar to building the Repository server in the previous step, utilizing Centur
 
 The Double-Take license required for this node is ‘Double-Take DR For Windows Recovery Target’
 
-1.   Once completed, the server can be managed from the Double-Take
+-   Once completed, the server can be managed from the Double-Take
     Management Console by ‘Add Servers’
 
     ![DT console add servers](../images/doubletake/DT-console-addservers.png)
 
     ![DT console add servers 2](../images/doubletake/DT-console-addservers-2.png)
 
-Creating the Recovery Job
+#### Creating the Recovery Job
 
-2.   Click on ‘Manage Jobs’ and select ‘Create a New Job’ or ‘Get
+1.   Click on ‘Manage Jobs’ and select ‘Create a New Job’ or ‘Get
     Started’
 
     ![DT console DR manage jobs new job](../images/doubletake/DT-console-DR-managejobs-new.png)
 
-3.   Choose Double-Take DR
+2.   Choose Double-Take DR
 
     ![DT console DR get started](../images/doubletake/DT-console-DR-getstarted.png)
 
-4.   In order to recover data or entire server, select ‘Recover files and folders or an entire Windows server’
+3.   In order to recover data or entire server, select ‘Recover files and folders or an entire Windows server’
 
     ![DT console DR recover](../images/doubletake/DT-console-DR-recover.png)
 
-5.   Pick the Source Repository Server and the Image to Recover
+4.   Pick the Source Repository Server and the Image to Recover
 
     ![DT console DR choose source](../images/doubletake/DT-console-DR-choosesource.png)
 
-6.   Choose Source Image to Recover, it can be done from a live image or a previously captured snapshot
+5.   Choose Source Image to Recover, it can be done from a live image or a previously captured snapshot
 
     ![DT console DR choose image](../images/doubletake/DT-console-DR-chooseimage.png)
 
-7.   Choose to recover data or entire server
+6.   Choose to recover data or entire server
 
     ![DT console DR choose data recover](../images/doubletake/DT-console-DR-choosedata-recover.png)
 
-8.   Choose the newly created server as the target server
+7.   Choose the newly created server as the target server
 
     ![DT console DR choose target](../images/doubletake/DT-console-DR-choosetarget.png)
 
-9.   Next is to customize the options for the recovery job, please do **NOT** change the network information in ‘Recovery Identity’ section on the target server as this will lead to lose access to the server in CenturyLink Cloud
+8.   Next is to customize the options for the recovery job, please do **NOT** change the network information in ‘Recovery Identity’ section on the target server as this will lead to lose access to the server in CenturyLink Cloud
 
     ![DT console DR options recover](../images/doubletake/DT-console-DR-options-recover.png)
 
@@ -272,15 +272,15 @@ Creating the Recovery Job
 
     ![DT console DR options recover network](../images/doubletake/DT-console-DR-options-recovernetwork.png)
 
-10.   Make sure the job meets all the requirement from the checklist
+9.   Make sure the job meets all the requirement from the checklist
 
     ![DT console DR options recover summary](../images/doubletake/DT-console-DR-options-recoversummary.png)
 
-11.   Once click on ‘Finish’, the ‘Manage Jobs’ screen will show the job has been submitted
+10.   Click on ‘Finish’, the ‘Manage Jobs’ screen will show the job has been submitted
 
     ![DT console DR managejobs recovery](../images/doubletake/DT-console-DR-managejobs-recovery.png)
 
-12.   Once completed, the status on the job will turn green and it can be used as a recovery server
+11.   Once completed, the status on the job will turn green and it can be used as a recovery server
     ![DT console DR manage jobs recovery completed](../images/doubletake/DT-console-DR-managejobs-recovery-completed.png)
 
 ### Perform a Test fail over
