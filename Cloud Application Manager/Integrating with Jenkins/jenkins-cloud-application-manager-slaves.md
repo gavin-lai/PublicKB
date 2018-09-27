@@ -40,6 +40,9 @@ Configure a Jenkins slave in Cloud Application Manager. Later, you’ll call thi
 
    ```
    #!/bin/bash
+	 sudo groupadd jenkins
+	 sudo useradd -m -d /var/lib/jenkins -G sudo -g jenkins jenkins
+	 JENKINS_HOME=~jenkins
    apt-get -y update
 
    if [ -z $(which java 2>/dev/null) ]
@@ -57,11 +60,12 @@ Configure a Jenkins slave in Cloud Application Manager. Later, you’ll call thi
 
    ```
    #!/bin/bash
-
+	 JENKINS_HOME=~jenkins
    # Execute the agent and save the PID
-   nohup java -jar slave.jar $JNLP_SLAVE_OPTIONS > slave.log 2>&1 &
+	 cd ${JENKINS_HOME}
+   nohup java -jar ${JENKINS_HOME}/slave.jar $JNLP_SLAVE_OPTIONS > ${JENKINS_HOME}/slave.log 2>&1 &
 
-   echo \$! > slave.pid
+   echo \$! > ${JENKINS_HOME}/slave.pid
    ```
 
    **Stop**. This script kills the agent when the retention period on Jenkins ends.
