@@ -1,6 +1,6 @@
 {{{
-  "title": "Create Site-to-site VPN between CLC and AWS",
-  "date": "03-06-2018",
+  "title": "Lumen Cloud Connect Services Introduction",
+  "date": "05-18-2021",
   "author": "Gavin Lai",
   "attachments": [
   {
@@ -13,12 +13,14 @@
   "sticky": true
 }}}
 
-### Table of contents
+### In this article:
 
 * [Overview](#overview)
-* [Create a Site to Site VPN in Lumen Cloud](#create-a-site-to-site-vpn-in-lumen-cloud)
-* [Create VPC](#create-vpc)
-* [Using CloudFormation Template](#using-cloudformation-template)
+* [Audience](#audience)
+* [Prerequistes](#prerequistes)
+* [Lumen Cloud Connect Capabilities and Flexibility](#lumen-cloudconnect-capabilities-flexibility)
+* [Cloud Providers supported by Lumen Cloud Connect](#cloud-providers-supported-by-lumne-cloud-cloudconnect)
+* [Lumen Cloud Connect Connectivity Options](#lumen-cloud-connect-connectivity-options)
 * [VPN setup with an existing VPC](#vpn-setup-with-an-existing-vpc)
 * [VPN Configuration on CLC](#vpn-configuration-on-clc)
   * [Phase 1](#phase-1)
@@ -27,94 +29,47 @@
 * [Custom Configurations](#custom-configurations)
 * [Support](#support)
 
-###  Overview
-This guide will walk through the different scenarios of connecting to an AWS environment using Site to Site VPN, including connecting to new VPC, existing VPC through console and using a basic CloudFormation template.
+### Overview
+Lumen Cloud Connect Solutions delivers secure, high-performance and virtualized networking functionality to leading public and private clouds. Our global reach and extensive Wavelength, Carrier Ethernet and IP VPN connectivity options meet today’s hybrid cloud business requirements. And available, dynamic SDN-based controls can provide you with a network experience that matches your cloud experience.
 
-### Create a Site to Site VPN in Lumen Cloud
+### Audience
 
-1. Before creating the VPN, a network diagram below would help to identify the VLANs in Lumen cloud and the subnets in AWS to communicate over the site to site VPN.  
+All users intertest in connecting to any public cloud platform
 
-   ![aws-clc](../../images/awsvpn/clc-aws.png)
+### Prerequistes
 
-2. First is to obtain the public IP address of the Lumen Cloud VPN gateway, this can be obtained from Lumen Cloud portal under Network -> Site to Site VPN.  Detail is for the Lumen Cloud Site to Site VPN setup is available [here](../Lumen Cloud/creating-a-self-service-ipsec-site-to-site-vpn-tunnel.md).
+None
 
-   ![aws-vpn](../../images/awsvpn/clc-s2s.png)
+### CloudConnect Capabilities and Flexibility
+* Capabilities
+  * Global Reach - Cloud connections in the North American, European, Latin American and Asia-Pacific regions
+  * Connectivity - Extensive connectivity options including Wavelengths, Ethernet Services and IP VPN, globally for most major CSPs
+  * Visibility - Available portals, mobile applications and APIs for accessibility to data, metrics and SDN network controls
+  * Data Center Connectivity - 360+ Lumen data centers, 2,200 third-party data centers
+* Flexibility
+  * Dynamic SDN-based capabilities are layered onto network services to provide greater visibility, flexibility and control of application traffic traversing your metro or wide-area network
 
-3. The Lumen Cloud end point IP address will be displayed once the desired data center is chosen (see below):
+![lumen-cloud-coneect](../../images/cloudconnect/cloud-connect.png)
 
-   ![aws-vpn](../../images/awsvpn/clc-vpn-endpoint.png)
+### Cloud Providers supported by Lumen Cloud Connect
 
-4. Once the IP address is collected, the next step will be creating the VPN connection for AWS.  Depending on the situation, one of the following steps will be required in order to establish the VPN connection:
+* Amazon Web Services® Direct Connect
+* Microsoft® ExpressRouteTM
+* Google® Cloud Partner Interconnect
+* Google® Cloud Carrier Peering
+* IBM® Resiliency Services
+* IBM® Cloud Managed Services
+* IBM® Cloud Direct Link
+* Oracle® Cloud Infrastructure FastConnect
 
-  * For a new AWS environment, a new VPC will be required
-  * An existing AWS enironment with VPC, a Virtual Private Gateway is needed
+For providers not listed above, please contact your Lumen sales representative with your destinations.
 
-A quick view on the configuration on the AWS side:
-### Create VPC
-
-1. In the AWS console, go to **Services**. Click on VPC and select the appropriate AWS region.
-
-2. Click on **Start VPC Wizard**
-
-3. Select either **VPC with Private Subnets and Hardware VPN Access** or **VPC with Public and Private Subnets and Hardware VPN Access**. Click **Select**.     
-   * Enter **IPv4 CIDR block** . This is going to be a /16 IP block that will be created under the VPC.   
-     **IPv6 CIDR Block** : Select the defaul option, **No IPv6 CIDR Block**.  
-     Enter **VPC name**.  
-
-   * (if required) Enter **Public subnet's IPv4 CIDR**. Enter a /24 IP block to use for the public subnet. This subnet should be within the range of /16 IP clock specied in step a.  
-     Select an **availability zone** for the subnet.
-     Enter the **Public subnet name**
-
-   * Enter **Private subnet's IPv4 CIDR**. Enter a /24 IP block to use for the private subnet. This subnet should be within the range        of /16 IP clock specied in step a.  
-     Select an **availability zone** for the subnet.   
-     Enter the **Private subnet name**.
-
-   * Click **Next**.
-
-4. Configure your VPN.  
-   * Enter **Customer Gateway IP** using the public IP of the Lumen VPN gateway obtained from first step.   
-
-   * Enter **Customer Gateway name** and **VPN Connection name**.  
-
-   * Change **Routing type** to **Static**
-
-   * Enter the IP address of the Lumen Cloud VLAN(s) that needs to be communicated over the VLAN and paste it under **IP prefix** of Static Routes in AWS.  
-
-   * Click **Create VPC**. This will initiate the VPC.
-
-   * Click **ok**  
-     Select the newly created VPC.
-     click **VPN Connections**.  
-     At the bottom left of the screen. Under tunnel details you can see the 2 tunnels created. The status will be down because CLC side of the tunnel has not been configured yet
-
-5. Once the VPN is created, go to the **VPN Connections** page under **VPC** of AWS portal, click on **Download Configuration**.  Pick either "Generic" or "pfSense" from the drop down menu, as both are text file configuration.  
-
-   ![clc-vpn-download](../../images/awsvpn/aws-vpn-download.png)
-
-Please take note of the following parameters for the Lumen Cloud side VPN configuration:  
-```
-  Your VPN Connection ID 		  : vpn-xxxxxxxx
-  Your Virtual Private Gateway ID  : vgw-xxxxxxxx
-  Your Customer Gateway ID		  : cgw-xxxxxxxx
-  Remote Gateway: xxx.xxx.xxx.xxx
-  Description: Amazon-IKE-vpn-xxxxxxxx-0
-  Pre-Shared Key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  Phase 1
-  Encryption algorithm : aes128
-  Hash algorithm :  sha1
-  DH key group :  2
-  Lifetime : 28800 seconds
-  NAT Traversal : Auto
-  Deed Peer Detection : Enable DPD
-  Phase 2
-  Protocol : ESP
-  Encryption algorigthms :aes128
-  Hash algorithms : sha1
-  PFS key group :   2
-  Lifetime : 3600 seconds
-```  
-### Using CloudFormation Template
-An Alternative way to create a VPC with VPN connection is using CloudFormation template, a sample is attached to this knowledge article.  CloudFormation templates can be deployed from AWS portal or Cloud Application Manager.  For detail on using AWS portal to deploy a CloudFormation template, please refer to this [article](//docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.html).  When using [Cloud Application Manager](//www.ctl.io/cloud-application-manager/) for CloudFormation templates, please make sure to have the appropriated permissions in the AWS IAM policy, more detail can be found [here](../../Cloud Application Manager/Deploying Anywhere/using-your-aws-account.md).  The process can be found in this [knowledge article](../../Cloud Application Manager/Automating Deployments/template-box.md).
+### Lumen Cloud Connect Connectivity Options
+**Cloud Provider/Connection Type**|**AWS**|**Azure**|**GCP**|**Oracle**|IBM Cloud**|**IBM Resiliency Services and Cloud Managed Services**
+-------------|-------------|-------------|-------------|-------------|-------------|-------------
+Layer 1 (WaveLength)|X|X|X|X|X|
+Layer 2 (Ethernet)|X|X|X|X| |X
+Layer 3 (MPLS/IP VPN)|X|X| | |X|X
 
 ### VPN setup with an existing VPC
 
