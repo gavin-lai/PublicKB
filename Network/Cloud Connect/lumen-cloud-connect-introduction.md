@@ -77,10 +77,8 @@ Placeholder for overview pages for each of the cloud providers
 
 ### Procedure to Configure Lumen Cloud Connect
 
-For new Lumen Cloud Connect users, please refer to [product readiness page](())
-
-### Custom configurations
-Customers who require custom configuration can leverage our [service task](//www.lumen.com/help/en-us/readiness/products.html). Examples include:
+For new Lumen Cloud Connect users, please refer to [product readiness page](//www.lumen.com/help/en-us/readiness/products.html)
+Examples include:
 * [EVPL to Microsoft Azure](//www.lumen.com/content/dam/lumen/help/readiness/evpl-to-microsoft-azure.pdf)
 * [MPLS/IPVPN to AWS with Dedicated Cross Connect](//www.lumen.com/content/dam/lumen/help/readiness/mpls-ipvpn-to-aws-with-dedicated-cross-connect.pdf)
 
