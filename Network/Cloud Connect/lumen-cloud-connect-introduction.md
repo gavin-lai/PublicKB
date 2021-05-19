@@ -21,12 +21,7 @@
 * [Lumen Cloud Connect Capabilities and Flexibility](#lumen-cloudconnect-capabilities-flexibility)
 * [Cloud Providers supported by Lumen Cloud Connect](#cloud-providers-supported-by-lumne-cloud-cloudconnect)
 * [Lumen Cloud Connect Connectivity Options](#lumen-cloud-connect-connectivity-options)
-* [VPN setup with an existing VPC](#vpn-setup-with-an-existing-vpc)
-* [VPN Configuration on CLC](#vpn-configuration-on-clc)
-  * [Phase 1](#phase-1)
-  * [Phase 2](#phase-2)
-* [Verify AWS Route Tables ](#verify-aws-route-tables)
-* [Custom Configurations](#custom-configurations)
+* [Procedure to Configure Lumen Cloud Connect](#procedure-to-configure-lumen-cloud-connect)
 * [Support](#support)
 
 ### Overview
@@ -49,12 +44,12 @@ None
 * Flexibility
   * Dynamic SDN-based capabilities are layered onto network services to provide greater visibility, flexibility and control of application traffic traversing your metro or wide-area network
 
-![lumen-cloud-coneect](../../images/cloudconnect/cloud-connect.png)
+![lumen-cloud-coneect](../../images/network/cloudconnect/cloud-connect.png)
 
 ### Cloud Providers supported by Lumen Cloud Connect
 
 * Amazon Web Services® Direct Connect
-* Microsoft® ExpressRouteTM
+* Microsoft® ExpressRoute
 * Google® Cloud Partner Interconnect
 * Google® Cloud Carrier Peering
 * IBM® Resiliency Services
@@ -71,76 +66,24 @@ Layer 1 (WaveLength)|X|X|X|X|X|
 Layer 2 (Ethernet)|X|X|X|X| |X
 Layer 3 (MPLS/IP VPN)|X|X| | |X|X
 
-### VPN setup with an existing VPC
+More options can be available by contacting your Lumen sales representative.
 
-1. Under VPC, Virtual Private Gateways, create a VPG for the VPC if one does not exist
+Placeholder for overview pages for each of the cloud providers
+* AWS
+* Azure
+* GCP
+* Oracle
+* IBM
 
-   ![aws-vpg](../../images/awsvpn/aws-vpg.png)
+### Procedure to Configure Lumen Cloud Connect
 
-2. Once it is created, create a VPN connection under VPC on AWS portal
-
-   ![aws-vpn](../../images/awsvpn/aws-vpn.png)  
-
-3. Provide  
-  *	Name Tag  
-  *	Virtual Private Gateway that the VPN is connecting  
-  *	Customer Gateway (New for Lumen Cloud)  
-  *	IP can be found in Create VPN page on Lumen Cloud (1 per data center)  
-  *	BGP ASN (leave as default)  
-  *	Routing option: Static  
-  *	Enter Lumen Cloud Network(s) that needs to communicate with AWS environment  
-  *	Tunnel Options: default  
-4. Using the AWS VPN configuration file, with the information from the file, complete the VPN setup in Lumen Cloud Site to Site VPN setup
-
-### VPN Configuration on CLC
-1. From Lumen Cloud portal under Network -> Site to Site VPN.  Detail is for the Lumen Cloud Site to Site VPN setup is available here. Pick the VPN endpoint that is configured as part of the AWS VPN configuration and add the Lumen Cloud VLAN(s) as part of the VPN setup for **VPN Peer IPv4 Address**.
-   ![aws-vpn](../../images/awsvpn/clc-vpn-endpoint.png)
-
-2. Enter **Site Name** (this can be the AWS VPN Connection ID) and **Device Name** (can be anything or using the AWS VPN ID).  
-
-   **VPN Peer IPv4 Address** is the Remote Gateway from the configuration file.  
-
-3. **Tunnel Encrypted Subnets** : Click **Add network block**. This is the private subnet from the AWS VPC.
-
-4. Click **next: phase 1**   
-
-Using the VPN configuration file downloaded to complete the next two step
-
-#### Phase 1
-
-* **Protocol Mode** - Main
-* **Encryption Algorithm** - AES-128 (can be AES-128, AES-192, AES-256 or 3DES)
-* **Hashing Algorithm** - SHA1(96) (can be SHA1, SHA2 or MD5)
-* **Pre-Shared Key** - Shared Key from the AWS VPN configuration
-* **Diffie-Hellman Group** - Group 2
-* **Lifetime Value** - 8 hours
-* **DPD State** - ON
-* NAT-T State - OFF
-
-#### Phase 2  
-* **IPEC Protocol** ESP  
-* **Encryption Algorithm**: AES-128   
-* **Hashing Algorithm**: SHA1  
-* **PFS Enabled**: ON, Group 2  
-* **Lifetime Value**: 1 hour  
-
-Click **Finish**.  
-Once the Lumen VPN is created, check on the AWS portal and click on **VPN connections**. The tunnel should now be **UP**.  
-
-
-### Verify AWS Route Tables
-1. Once VPN setup is completed, verify the VPC Route Tables is correct, either the default route or the Lumen subnets should be routed through the Virtual Private Network
-   ![aws-routing](../../images/awsvpn/aws-routing.png)
-2. Ensure Network ACL and Security Group are configured to allow traffic from the CLC network  
-   ![acl](../../images/awsvpn/acl.png)  
-   ![aws-securitygroup](../../images/awsvpn/aws-securitygroup.png)  
-3. Initiate “ping” or SSH from a CLC server to a server in the AWS network to validate the connectivity
+For new Lumen Cloud Connect users, please refer to [product readiness page](())
 
 ### Custom configurations
-Customers who require custom configuration can leverage our [service task](//www.ctl.io/service-tasks/#vpn-tunnels-deployment). Examples include:
-* Redundant VPN Tunnels
-* AES256 IPSEC Encryption
+Customers who require custom configuration can leverage our [service task](//www.lumen.com/help/en-us/readiness/products.html). Examples include:
+* [EVPL to Microsoft Azure](//www.lumen.com/content/dam/lumen/help/readiness/evpl-to-microsoft-azure.pdf)
+* [MPLS/IPVPN to AWS with Dedicated Cross Connect](//www.lumen.com/content/dam/lumen/help/readiness/mpls-ipvpn-to-aws-with-dedicated-cross-connect.pdf)
 
 ### Support
 
-* For issues related to cloud infrastructure (VM's, network, etc), or if you experience a problem deploying any Blueprint or Script Package, please open a Lumen Cloud Support ticket by emailing [help@ctl.io](mailto:help@ctl.io) or [through the Lumen Cloud Support website](//t3n.zendesk.com/tickets/new).
+* For issues related to Lumen Cloud Connect Services, please open a Lumen Support ticket by visiting [customer support](//www.lumen.com/en-us/contact-us-support.html) or [through the Lumen Support website](//www.lumen.com/help/en-us/home.html).
