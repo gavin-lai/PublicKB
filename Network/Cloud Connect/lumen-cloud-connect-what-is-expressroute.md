@@ -43,12 +43,12 @@ Azure compute services, namely virtual machines (IaaS) and virtual networks (VNE
 PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on public IP addresses. You can privately connect to services hosted on public IP addresses, including VIPs of your cloud services, through the Microsoft Peering routing domain. You can connect the Microsoft Peering domain to your extranet and connect to all Azure services on their public IP addresses from your WAN without having to connect through the Internet
 
 
-![microsoft-expressroute](../../images/network/MicrosoftExpressRoute.png)
-![microsoft-expressroute-peering](../../images/network/microsoftexpressroute-peering.png)
+![microsoft-expressroute](../../images/network/cloudconnect/MicrosoftExpressRoute.png)
+![microsoft-expressroute-peering](../../images/network/cloudconnect/microsoftexpressroute-peering.png)
 
 ### Lumen Cloud Connect for Microsoft ExpressRoute
 
-![cloudconnect-azure-mpls](../../images/network/cloudconnect-azure-mpls.png)
+![cloudconnect-azure-mpls](../../images/network/cloudconnect/cloudconnect-azure-mpls.png)
 
 **Cloud Provider**|**Microsoft® Azure**
 -------------|-------------
