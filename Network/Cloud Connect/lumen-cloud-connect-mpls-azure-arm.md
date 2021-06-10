@@ -30,18 +30,18 @@ The purpose of this document is to provide an end-to-end walk through for a cust
 
 ### Audience
 
-Users has ordered [Lumen Cloud Connect](../../Network/Cloud Connect/lumen-cloud-connect-introduction.md) to connect to their Azure environment.
+Users has ordered [Lumen Cloud Connect](../Cloud Connect/lumen-cloud-connect-introduction.md) to connect to their Azure environment.
 
 ### Prerequistes
 
 Lumen Cloud Connect is ordered and access to Azure Portal with the right permission
 
 ### What is ExpressRoute
-Please refer to [What is ExpressRoute knowledge article](../cloudconnect/lumen-cloud-connect-what-is-expressroute.md).  
+Please refer to [What is ExpressRoute knowledge article](../Cloud Connect/lumen-cloud-connect-what-is-expressroute.md).  
 
 ### Lumen Cloud Connect MPLS/IPVPN to Microsoft Azure
 
-![cloudconnect-azure-mpls](../../images/network/cloudconnect-azure-mpls.png)
+![cloudconnect-azure-mpls](../../images/network/cloudconnect/cloudconnect-azure-mpls.png)
 
 * Customer is responsible for express route costs and configuration
 * Firewall / NAT services will be provided by Lumen when accessing Microsoft Peering for PaaS/SaaS Services
@@ -78,10 +78,11 @@ Link virtual Network(s) to the dedicated circuit*|X| |
 
 #### Customer signs into Azure Portal
   * Sign into [Azure portal](//portal.azure.com) with a user who has the right permissions
-    ![azure-portal](../../images/network/cloudconnect/step1-signin-azure-portal.png)
+      ![azure-portal](../../images/network/cloudconnect/step1-signin-azure-portal.png)
 #### Customer creates a new ExpressRoute Circuit
   * After clicking ExpressRoute, portal will display ‘Create ExpressRoute circuit’ blade. When filling in the values on this blade, here are some helpful tips:
-  * Select the Provider as **Level 3 Communications – IPVPN**, see below: ![creates-new-expressroute-circuit](../../images/network/cloudconnect/creates-new-expressroute-circuit.png)
+  * Select the Provider as **Level 3 Communications – IPVPN**, see below:
+  ![creates-new-expressroute-circuit](../../images/network/cloudconnect/creates-new-expressroute-circuit.png)
   * Select the appropriate ExpressRoute  location.
     * For Example:  Silicon Valley = San Jose; Washington DC = Ashburn
   * Specify the correct SKU for Tier and Data Metering:
