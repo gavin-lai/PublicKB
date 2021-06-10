@@ -39,16 +39,27 @@ None
 ### What is ExpressRoute
 [Microsoft Azure ExpressRoute](//azure.microsoft.com/en-us/documentation/articles/expressroute-introduction/) lets you create private connections between Microsoft datacenters and the infrastructure that’s in a co-location environment. ExpressRoute connections offer higher security, more reliability, faster speeds and predictable latencies than typical connections over the Internet. In some cases, using ExpressRoute connections to transfer data between your on-premises network and Azure can also yield significant cost benefits.
 Azure offers circuit bandwidths from 50 Mbps to 10 Gbps (50Mbps, 100Mbps, 200 Mbps, 500 Mbps, 1 Gbps, 2 Gbps, 5Gbps, and 10 Gbps).
-Azure compute services, namely virtual machines (IaaS) and virtual networks (VNETs) deployed within a virtual network can be connected through the Azure Private Peering domain. 
+Azure compute services, namely virtual machines (IaaS) and virtual networks (VNets) deployed within a virtual network can be connected through the Azure Private Peering domain. 
 PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on public IP addresses. You can privately connect to services hosted on public IP addresses, including VIPs of your cloud services, through the Microsoft Peering routing domain. You can connect the Microsoft Peering domain to your extranet and connect to all Azure services on their public IP addresses from your WAN without having to connect through the Internet
 
-
 ![microsoft-expressroute](../../images/network/cloudconnect/MicrosoftExpressRoute.png)
-![microsoft-expressroute-peering](../../images/network/cloudconnect/microsoftexpressroute-peering.png)
+
+![microsoft-expressroute-peering](../../images/network/cloudconnect/expressroute-peerings.png)
+
+[Peering Comparison](//docs.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings#peeringcompare)
+
+** **|**Private Peering**|**Microsoft Peering**
+-------------|-------------|-------------
+**Max. # prefixes supported per peering**|4000 by default, 10,000 with ExpressRoute Premium|200
+**IP address ranges supported**|Any valid IP address within your WAN|Public IP addresses owned by you or your connectivity provider
+**AS Number requirements**|Private and public AS numbers. You must own the public AS number if you choose to use one|Private and public AS numbers. However, you must prove ownership of public IP addresses
+**IP protocols supported**|IPv4, IPv6 (preview)|IPv4, IPv6
+**Routing Interface IP addresses**|RFC1918 and public IP addresses|Public IP addresses registered to you in routing registries
+**MD5 Hash support**|Yes|Yes
 
 ### Lumen Cloud Connect for Microsoft ExpressRoute
 
-![cloudconnect-azure-mpls](../../images/network/cloudconnect/cloudconnect-azure-mpls.png)
+There are different connectivity options to connect to Microsoft Azure, the current options are listed below:
 
 **Cloud Provider**|**Microsoft® Azure**
 -------------|-------------
@@ -58,7 +69,7 @@ Ethernet (Layer 2)|:heavy_check_mark:
 IP VPN (Layer 3)|:heavy_check_mark:
 Dynamic Connections|:heavy_check_mark:
 
-For On-Ramps location, please refer to the [maps](//assets.lumen.com/is/content/Lumen/maps-cloud-connect-on-ramps?Creativeid=c3d38810-e03e-4fb5-bb94-fd6551ff7388).
+For On-Ramps locations, please refer to the [maps](//assets.lumen.com/is/content/Lumen/maps-cloud-connect-on-ramps?Creativeid=c3d38810-e03e-4fb5-bb94-fd6551ff7388).
 
 To learn more on how Lumen Cloud Connect can connect your company to Microsoft Azure, please visit the [Product page](//www.lumen.com/en-us/hybrid-it-cloud/cloud-connect.html) or consult with your account team.  
 
