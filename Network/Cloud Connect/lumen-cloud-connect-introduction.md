@@ -1,10 +1,10 @@
 {{{
   "title": "Lumen Cloud Connect Services Introduction",
-  "date": "05-18-2021",
+  "date": "06-11-2021",
   "author": "Gavin Lai",
   "attachments": [
   {
-    "file_name": "Sample CloudFormation template to create VPC with VPN connectivity",
+    "file_name": "Lumen Cloud Connect Services Introduction",
     "url": "../attachments/vpn-vpc-cloudforamtion.zip",
     "type": "application/zip"
   }
