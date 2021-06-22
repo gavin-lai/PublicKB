@@ -17,7 +17,7 @@
 
 * [Overview](#overview)
 * [Audience](#audience)
-* [Prerequistes](#prerequistes)
+* [Prerequisites](#prerequisites)
 * [What is Azure ExpressRoute](#what-is-azure-expressroute)
 * [Azure ExpressRoute Peering](#azure-expressoute-peering)
 * [Lumen Cloud Connect Connectivity Options](#lumen-cloud-connect-connectivity-options)
@@ -33,7 +33,7 @@ The purpose of this document is to provide an overview of Lumen Cloud Connect an
 
 Users plan to order [Lumen Cloud Connect](../../Network/Cloud Connect/lumen-cloud-connect-introduction.md) to connect to their Azure environment.
 
-### Prerequistes
+### Prerequisites
 
 None
 
@@ -47,7 +47,7 @@ PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on p
 
 ### Azure ExpressRoute Peering
 
-![microsoft-expressroute-peering](../../images/network/cloudconnect/expressroute-peerings.png)
+![microsoft-expressroute-peering](../../images/network/cloudconnect/microsoftexpressroute-peering.png)
 
 [Peering Comparison](//docs.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings#peeringcompare)
 

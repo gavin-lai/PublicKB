@@ -17,11 +17,11 @@
 
 * [Overview](#overview)
 * [Audience](#audience)
-* [Prerequistes](#prerequistes)
-* [What is Express Route](#what-is-direct-connect)
+* [Prerequisites](#prerequisites)
+* [What is Azure ExpressRoute](#what-is-azure-expressroute)
 * [Lumen Cloud Connect MPLS IPVPN to Microsoft Azure](#lumen-cloud-connect-mpls-ipvpn-to-microsoft-azure)
-* [Lumen Cloud Connect Roles and Responsibilities](#lumen-cloud-connect-roles-Responsibilities)
-* [Overview of Procedure to Configure Lumen Cloud Connect](#overview-procedure-to-configure-lumen-cloud-connect)
+* [Lumen Cloud Connect Roles and Responsibilities](#lumen-cloud-connect-roles-responsibilities)
+* [Overview of procedures to configure Lumen Cloud Connect](#overview-procedures-to-configure-lumen-cloud-connect)
   * [Sign into Azure Portal](#customer-signs-into-azure-portal)
   * [Create a new Azure ExpressRoute Circuit](#create-a-new-azure-expressroute-circuit)
   * [View the circuits and properties](#view-the-circuits-and-properties)
@@ -40,14 +40,14 @@ The purpose of this document is to provide an end-to-end walk through for a cust
 
 Users has ordered [Lumen Cloud Connect](lumen-cloud-connect-introduction.md) to connect to their Azure environment.
 
-### Prerequistes
+### Prerequisites
 
 Lumen Cloud Connect is ordered and access to Azure Portal with the right permission
 
-### What is ExpressRoute
+### What is Azure ExpressRoute
 Please refer to [What is ExpressRoute knowledge article](lumen-cloud-connect-what-is-expressroute.md).  
 
-### Lumen Cloud Connect MPLS/IPVPN to Microsoft Azure
+### Lumen Cloud Connect MPLS IPVPN to Microsoft Azure
 
 ![cloudconnect-azure-mpls](../../images/network/cloudconnect/cloudconnect-azure-mpls.png)
 
@@ -71,12 +71,12 @@ Configure BGP Route Filtering (:warning: required for Microsoft Peering PaaS/Saa
 **Link services on Azure to the dedicated circuit**| | |
 Link virtual Network(s) to the dedicated circuit*|X| |
 
-### Overview of Procedure to Configure Lumen Cloud Connect
+### Overview of procedures to configure Lumen Cloud Connect
 
-1. [Customer signs into Azure portal](#customer-signs-into-azure-portal)
-2. [Customer creates a new ExpressRoute circuit](#customer-creates-a-new-exporessroute-circuit)
-3. [Customer views the circuits and properties](#customer-views-the-circuits-and-properties)
-4. [Customer requests Lumen Cloud Connect service](#customer-requests-lumen-cloud-connect-service)
+1. [Sign into Azure portal](#sign-into-azure-portal)
+2. [Create a new ExpressRoute circuit](#create-a-new-exporessroute-circuit)
+3. [View the circuits and properties](#view-the-circuits-and-properties)
+4. [Request Lumen Cloud Connect service](#request-lumen-cloud-connect-service)
 5. [Service Key creation](#service-key-creation)
 6. [Lumen provisions Cloud Connect to Microsoft Azure ExpressRoute](#lumen-provisions-cloud-connect-to-microsoft-azure-expressroute)
 7. [Configure Microsoft Peering](#configure-microsoft-peering)
@@ -84,12 +84,12 @@ Link virtual Network(s) to the dedicated circuit*|X| |
 
 ### Procedure to Configure Lumen Cloud Connect
 
-#### Customer signs into Azure Portal
+#### Sign into Azure Portal
   * Sign into [Azure portal](//portal.azure.com) with a user who has the right permissions
 
   ![azure-portal](../../images/network/cloudconnect/step1-signin-azure-portal.png)
 
-#### Customer creates a new ExpressRoute Circuit
+#### Create a new ExpressRoute Circuit
   * After clicking ExpressRoute, portal will display ‘Create ExpressRoute circuit’ blade. When filling in the values on this blade, here are some helpful tips:
   * Select the Provider as **Level 3 Communications – IPVPN**, see below:
 
@@ -109,11 +109,11 @@ Link virtual Network(s) to the dedicated circuit*|X| |
 *Important*:
 *Please be aware that the ‘Peering Location’ indicates the physical location where you are peering with Microsoft. This is not linked to "Location" property, which refers to the geography where the Azure Network Resource Provider is located.*
 
-#### Customer views the circuits and properties
+#### View the circuits and properties
   * Create an ExpressRoute circuit by selecting the option to create a new resource: ![expressroute-new-resource](../../images/network/cloudconnect/expressroute-new-resource.png)
   * View all created ExpressRoute circuits by selecting All resources on the left-side menu: ![expressroute-view-circuits](../../images/network/cloudconnect/expressroute-view-circuits.png) ![expressroute-view-circuits-2](../../images/network/cloudconnect/expressroute-view-circuits-2.png)
 
-### Customer requests Lumen Cloud Connect service
+### Request Lumen Cloud Connect service
   * To order a Lumen Cloud Connect, contact your Lumen Account Representative
     * Contact your Lumen account rep to assist in ordering a Cloud Connect to ExpressRoute.
     * Information needed by Lumen to complete connection:
@@ -165,7 +165,7 @@ Please refer to [Quickstart: Create and modify an ExpressRoute circuit](//azure.
 
 ### Additional Azure ExpressRoute and Lumen Cloud Connect Resources
 
-Please refer to the [What is ExpressRoute Knowledge Article](lumen-cloud-connect-what-is-expressroute.md) for additional Azure ExpressRoute resources.
+Please refer to the [What is ExpressRoute Knowledge Article](lumen-cloud-connect-what-is-expressroute.md) for [additional Azure ExpressRoute resources](lumen-cloud-connect-what-is-expressroute.md#azure-expressroute-resources).
 For further information on Lumen Cloud Connect, please refer to [product readiness page](//www.lumen.com/help/en-us/readiness/products.html)
 
 ### Support

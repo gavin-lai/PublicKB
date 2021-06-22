@@ -17,10 +17,11 @@
 
 * [Overview](#overview)
 * [Audience](#audience)
-* [Prerequistes](#prerequistes)
+* [Prerequisites](#prerequisites)
 * [Lumen Cloud Connect Capabilities and Flexibility](#lumen-cloudconnect-capabilities-flexibility)
-* [Cloud Providers supported by Lumen Cloud Connect](#cloud-providers-supported-by-lumne-cloud-cloudconnect)
+* [Cloud Providers supported by Lumen Cloud Connect](#cloud-providers-supported-by-lumnen-cloud-cloudconnect)
 * [Lumen Cloud Connect Connectivity Options](#lumen-cloud-connect-connectivity-options)
+* [Overview of Lumen Cloud Connect to different cloud providers](#overview-of-lumen-cloud-connect-to-different-cloud-providers)
 * [Procedure to Configure Lumen Cloud Connect](#procedure-to-configure-lumen-cloud-connect)
 * [Support](#support)
 
@@ -31,11 +32,11 @@ Lumen Cloud Connect Solutions delivers secure, high-performance and virtualized 
 
 All users intertest in connecting to any public cloud platform
 
-### Prerequistes
+### Prerequisites
 
 None
 
-### CloudConnect Capabilities and Flexibility
+### Lumen Cloud Connect Capabilities and Flexibility
 * Capabilities
   * Global Reach - Cloud connections in the North American, European, Latin American and Asia-Pacific regions
   * Connectivity - Extensive connectivity options including Wavelengths, Ethernet Services and IP VPN, globally for most major CSPs
@@ -68,9 +69,10 @@ Layer 3 (MPLS/IP VPN)|X|X| | |X|X
 
 More options can be available by contacting your Lumen sales representative.
 
-Placeholder for overview pages for each of the cloud providers
-* AWS
-* Azure
+### Overview of Lumen Cloud Connect to different cloud providers
+
+* [AWS](lumen-cloud-connect-what-is-directconnect.md)
+* [Azure](lumen-cloud-connect-what-is-expressroute.md)
 * GCP
 * Oracle
 * IBM
@@ -79,8 +81,8 @@ Placeholder for overview pages for each of the cloud providers
 
 For new Lumen Cloud Connect users, please refer to [product readiness page](//www.lumen.com/help/en-us/readiness/products.html)
 Examples include:
-* [EVPL to Microsoft Azure](//www.lumen.com/content/dam/lumen/help/readiness/evpl-to-microsoft-azure.pdf)
-* [MPLS/IPVPN to AWS with Dedicated Cross Connect](//www.lumen.com/content/dam/lumen/help/readiness/mpls-ipvpn-to-aws-with-dedicated-cross-connect.pdf)
+* [MPLS IPVPN to Azure](lumen-cloud-connect-mpls-azure-arm.md)
+* [MPLS/IPVPN to AWS with Dedicated Cross Connect](lumen-cloud-connect-mpls-aws.md)
 
 ### Support
 

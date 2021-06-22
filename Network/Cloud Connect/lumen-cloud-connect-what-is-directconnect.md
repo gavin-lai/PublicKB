@@ -17,7 +17,7 @@
 
 * [Overview](#overview)
 * [Audience](#audience)
-* [Prerequistes](#prerequistes)
+* [Prerequisites](#prerequisites)
 * [What is AWS Direct Connect](#what-is-aws-direct-coonect)
 * [Lumen Cloud Connect for AWS Direct Connect](#lumen-cloud-connect-connectivity-options)
 * [AWS Direct Connect resources](#azure-exporessroute-resrouces)
@@ -31,7 +31,7 @@ The purpose of this document is to provide an overview of Lumen Cloud Connect an
 
 Users plan to order [Lumen Cloud Connect](../../Network/Cloud Connect/lumen-cloud-connect-introduction.md) to connect to their AWS environment.
 
-### Prerequistes
+### Prerequisites
 
 None
 
@@ -47,7 +47,7 @@ There are two connetion options available for Direct Connect, dedicated and host
 
 Please see the [Getting Started with AWS Direct Connect](https://aws.amazon.com/directconnect/getting-started/) for connection options.
 
-![aws-direct-connect-options](../../images/network/cloudconnect/directconnect-options)
+![aws-direct-connect-options](../../images/network/cloudconnect/directconnect-options.png)
 
 ### Lumen Cloud Connect for AWS Direct Connect
 
@@ -77,7 +77,7 @@ To learn more on how Lumen Cloud Connect can connect your company to AWS, please
 **FAQ**|https://aws.amazon.com/directconnect/faqs/
 **Getting started**|https://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html
 **AWS Direct Connect Limits**|https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#directconnect_limits
-**Notes**|A single Lumen Dedicated IP VPN/MPLS Cloud Connect service supports connectivity to a single virtual interface (VIF) / VPC or a single Direct Connect gateway. To support additional VIFs/VPCs/Direct Connect gateways, order additional Cloud Connect logical connections. For more information, contact your Lumen representative.
+**Notes**|A single Lumen Dedicated IP VPN/MPLS Cloud Connect service supports connectivity to a single virtual interface (VIF)/VPC or a single Direct Connect gateway. To support additional VIFs/VPCs/Direct Connect gateways, order additional Cloud Connect logical connections. For more information, contact your Lumen representative.
 
 
 ### Support

@@ -17,12 +17,12 @@
 
 * [Overview](#overview)
 * [Audience](#audience)
-* [Prerequistes](#prerequistes)
+* [Prerequisites](#prerequisites)
 * [What is Direct Connect](#what-is-direct-connect)
 * [Lumen Cloud Connect MPLS IPVPN to AWS](#lumen-cloud-connect-mpls-ipvpn-to-aws)
-* [Lumen Cloud Connect Roles and Responsibilities](#lumen-cloud-connect-roles-Responsibilities)
-* [Overview of Procedure to Configure Lumen Cloud Connect](#overview-procedure-to-configure-lumen-cloud-connect)
-  * [Customer requests Lumen Cloud Connect service](#customer-request-lumen-cloud-connect-service)
+* [Lumen Cloud Connect Roles and Responsibilities](#lumen-cloud-connect-roles-responsibilities)
+* [Overview of procedures to configure Lumen Cloud Connect](#overview-of-procedures-to-configure-lumen-cloud-connect)
+  * [Customer requests Lumen Cloud Connect service](#customer-requests-lumen-cloud-connect-service)
   * [Creating the Direct Connect and Generating LOA CFA](#creating-the-direct-connect-and-generating-loa-cfa)
   * [Creating the AWS Direct Connect from the AWS User Console](#creating-the-aws-direct-connect-from-the-aws-user-console)
   * [Obtaining LOA CFA from the AWS User Console](#obtaining-loa-cfa-from-the-aws-user-console)
@@ -33,7 +33,7 @@
 ### Overview
 The purpose of this document is to provide an end-to-end walk through for a customer setting up Hosted Direct Connect for the first time via CenturyLink’s Cloud Connect. Information contained is provided to serve as a supplement to AWS documentation linked throughout this document. Users should check the provided links to obtain the most up-to-date information and for more details pertaining to AWS processes.  This document is for Cloud Connect services connecting to AWS Direct Connect with a dedicated cross connect (see diagram below).  The supporting service ordered from Lumen is dedicated cloud connect to AWS.  
 
-![aws-direct-connect-options](../../images/network/cloudconnect/directconnect-options)
+![aws-direct-connect-options](../../images/network/cloudconnect/directconnect-options.png)
 
 ### Audience
 
@@ -47,7 +47,7 @@ Lumen Cloud Connect is ordered and access to AWS Portal with the right permissio
 
 Please refer to [What is AWS Direct Connect knowledge article](lumen-cloud-connect-what-is-directconnect.md).  
 
-### Lumen Cloud Connect MPLS/IPVPN to AWS
+### Lumen Cloud Connect MPLS IPVPN to AWS
 
 ![cloudconnect-aws-mpls](../../images/network/cloudconnect/cloudconnect-aws-mpls.png)
 
@@ -69,13 +69,13 @@ Configure BGP peering on AWS side using console facing Lumen|X| |
 **Link services on AWS to the dedicated circuit**| | |
 Create and link virtual interface, virtual private gateway, VPC, Direct Connect gateway, etc. as applicable using the AWS console|X| |
 
-### Overview of Procedure to Configure Lumen Cloud Connect
+### Overview of procedures to configure Lumen Cloud Connect
 
-1. [Customer requests Lumen Cloud Connect service](#customer-reuests-lumen-cloud-connect-service)
-2. [Creating the Direct Connect and Generating LOA/CFA](#creating-the-direct-connect-and-generating-loa-cfa)
-3. [Creating the AWS Direct Connect from the AWS User Console](#crreating-the-aws-direct-connect-from-the-aws-user-console)
-4. [Obtaining LOA/CFA from the AWS User Console](#obtaining-loa-cfa-from-the-aws-user-console)
-5. [Lumen and Customer Provisions Cloud Connect to AWS](#lumen-customer-provisions-cloud-connect-to-aws)
+1. [Customer requests Lumen Cloud Connect service](#customer-requests-lumen-cloud-connect-service)
+2. [Creating the Direct Connect and Generating LOA CFA](#creating-the-direct-connect-and-generating-loa-cfa)
+3. [Creating the AWS Direct Connect from the AWS User Console](#creating-the-aws-direct-connect-from-the-aws-user-console)
+4. [Obtaining LOA CFA from the AWS User Console](#obtaining-loa-cfa-from-the-aws-user-console)
+5. [Lumen and Customer Provisions Cloud Connect to AWS](#lumen-and-customer-provisions-cloud-connect-to-aws)
 
 ### Procedure to Configure Lumen Cloud Connect
 
@@ -123,7 +123,7 @@ For latest information, please refer to [AWS Direct Connect User Guide](//docs.a
 Upon provisioning completion by CenturyLink, you will receive the configuration information from the CenturyLink provisioning with instructions as to order completion, activation scheduling, etc.. As applicable to your order.
 
 ### Additional AWS Direct Connect and Lumen Cloud Connect Resources
-Please refer to the [What is AWS Direct Connect Knowledge Article](lumen-cloud-what-is-directconnect.md) for additional Azure ExpressRoute resources.
+Please refer to the [What is AWS Direct Connect Knowledge Article](lumen-cloud-connect-what-is-directconnect.md) for [additional Azure ExpressRoute resources](lumen-cloud-connect-what-is-directconnect.md#aws-direct-connection-resources).
 For further information on Lumen Cloud Connect, please refer to [product readiness page](//www.lumen.com/help/en-us/readiness/products.html)
 
 ### Support
