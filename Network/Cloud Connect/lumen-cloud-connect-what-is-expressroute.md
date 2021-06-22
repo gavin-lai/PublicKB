@@ -51,9 +51,9 @@ PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on p
 
 [Peering Comparison](//docs.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings#peeringcompare)
 
-**Private Peering**|**Microsoft Peering**
+**Private Peering**|**Microsoft Peering**| 
 -------------|-------------|-------------
-**Max. # prefixes supported per peering**|4000 by default, 10,000 with ExpressRoute Premium|200
+**Max. # prefixes supported per peering**|4000 by default, 10000 with ExpressRoute Premium|200
 **IP address ranges supported**|Any valid IP address within your WAN|Public IP addresses owned by you or your connectivity provider
 **AS Number requirements**|Private and public AS numbers. You must own the public AS number if you choose to use one|Private and public AS numbers. However, you must prove ownership of public IP addresses
 **IP protocols supported**|IPv4, IPv6 (preview)|IPv4, IPv6
