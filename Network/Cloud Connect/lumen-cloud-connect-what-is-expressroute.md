@@ -45,7 +45,7 @@ PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on p
 
 ![microsoft-expressroute-peering](../../images/network/cloudconnect/microsoftexpressroute-peering.png)
 
-[Peering Comparison](//docs.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings#peeringcompare)
+### [Peering Comparison](//docs.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings#peeringcompare)
 
 
 | |**Private Peering**|**Microsoft Peering**
