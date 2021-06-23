@@ -3,11 +3,6 @@
   "date": "06-06-2021",
   "author": "Gavin Lai",
   "attachments": [
-  {
-    "file_name": "Sample CloudFormation template to create VPC with VPN connectivity",
-    "url": "../attachments/vpn-vpc-cloudforamtion.zip",
-    "type": "application/zip"
-  }
   ],
   "contentIsHTML": false,
   "sticky": true
@@ -28,10 +23,9 @@
 ### Overview
 The purpose of this document is to provide an overview of Lumen Cloud Connect and Azure ExpressRoute with references for further details.
 
-
 ### Audience
 
-Users plan to order [Lumen Cloud Connect](../../Network/Cloud Connect/lumen-cloud-connect-introduction.md) to connect to their Azure environment.
+Users plan to order [Lumen Cloud Connect](lumen-cloud-connect-introduction.md) to connect to their Azure environment.
 
 ### Prerequisites
 
@@ -39,9 +33,11 @@ None
 
 ### What is ExpressRoute
 [Microsoft Azure ExpressRoute](//azure.microsoft.com/en-us/documentation/articles/expressroute-introduction/) lets you create private connections between Microsoft datacenters and the infrastructure that’s in a co-location environment. ExpressRoute connections offer higher security, more reliability, faster speeds and predictable latencies than typical connections over the Internet. In some cases, using ExpressRoute connections to transfer data between your on-premises network and Azure can also yield significant cost benefits.
+
 Azure offers circuit bandwidths from 50 Mbps to 10 Gbps (50Mbps, 100Mbps, 200 Mbps, 500 Mbps, 1 Gbps, 2 Gbps, 5Gbps, and 10 Gbps).
 Azure compute services, namely virtual machines (IaaS) and virtual networks (VNets) deployed within a virtual network can be connected through the Azure Private Peering domain. 
-PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on public IP addresses. You can privately connect to services hosted on public IP addresses, including VIPs of your cloud services, through the Microsoft Peering routing domain. You can connect the Microsoft Peering domain to your extranet and connect to all Azure services on their public IP addresses from your WAN without having to connect through the Internet
+
+PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on public IP addresses. You can privately connect to services hosted on public IP addresses, including VIPs of your cloud services, through the Microsoft Peering routing domain. You can connect the Microsoft Peering domain to your extranet and connect to all Azure services on their public IP addresses from your WAN without having to connect through the Internet.
 
 ![microsoft-expressroute](../../images/network/cloudconnect/MicrosoftExpressRoute.png)
 
@@ -51,8 +47,9 @@ PaaS Services such as Azure Storage, SQL databases and Web Apps are offered on p
 
 [Peering Comparison](//docs.microsoft.com/en-us/azure/expressroute/expressroute-circuit-peerings#peeringcompare)
 
-**Private Peering**|**Microsoft Peering**| 
--------------|-------------|-------------
+
+| |**Private Peering**|**Microsoft Peering**
+ -------------|-------------|-------------
 **Max. # prefixes supported per peering**|4000 by default, 10000 with ExpressRoute Premium|200
 **IP address ranges supported**|Any valid IP address within your WAN|Public IP addresses owned by you or your connectivity provider
 **AS Number requirements**|Private and public AS numbers. You must own the public AS number if you choose to use one|Private and public AS numbers. However, you must prove ownership of public IP addresses
