@@ -4,9 +4,6 @@
   "author": "Gavin Lai",
   "attachments": [
   {
-    "file_name": "Lumen Cloud Connect Services Introduction",
-    "url": "../attachments/vpn-vpc-cloudforamtion.zip",
-    "type": "application/zip"
   }
   ],
   "contentIsHTML": false,

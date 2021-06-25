@@ -3,11 +3,7 @@
   "date": "06-06-2021",
   "author": "Gavin Lai",
   "attachments": [
-  {
-    "file_name": "Sample CloudFormation template to create VPC with VPN connectivity",
-    "url": "../attachments/vpn-vpc-cloudforamtion.zip",
-    "type": "application/zip"
-  }
+  {}
   ],
   "contentIsHTML": false,
   "sticky": true
