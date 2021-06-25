@@ -73,9 +73,9 @@ More options can be available by contacting your Lumen sales representative.
 
 * [AWS](lumen-cloud-connect-what-is-directconnect.md)
 * [Azure](lumen-cloud-connect-what-is-expressroute.md)
-* GCP
-* Oracle
-* IBM
+* [Google Cloud Platform](lumen-cloud-connect-what-is-gcp-interconnect)
+* [Oracle Cloud Infrastructure](lumen-cloud-connect-what-is-oracle-fastconnect)
+* [IBM Cloud](lumen-cloud-connect-what-is-ibm-cloud)
 
 ### Procedure to Configure Lumen Cloud Connect
 
