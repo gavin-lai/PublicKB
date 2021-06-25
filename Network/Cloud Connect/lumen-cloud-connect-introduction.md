@@ -65,7 +65,7 @@ For providers not listed above, please contact your Lumen sales representative w
 -------------|-------------|-------------|-------------|-------------|-------------|-------------
 Layer 1 (WaveLength)|X|X|X|X|X|
 Layer 2 (Ethernet)|X|X|X|X| |X
-Layer 3 (MPLS/IP VPN)|X|X| | |X|X
+Layer 3 (MPLS/IP VPN)|X|X|X| |X|X
 
 More options can be available by contacting your Lumen sales representative.
 
@@ -73,9 +73,9 @@ More options can be available by contacting your Lumen sales representative.
 
 * [AWS](lumen-cloud-connect-what-is-directconnect.md)
 * [Azure](lumen-cloud-connect-what-is-expressroute.md)
-* [Google Cloud Platform](lumen-cloud-connect-what-is-gcp-interconnect)
-* [Oracle Cloud Infrastructure](lumen-cloud-connect-what-is-oracle-fastconnect)
-* [IBM Cloud](lumen-cloud-connect-what-is-ibm-cloud)
+* [Google Cloud Platform](lumen-cloud-connect-what-is-gcp-interconnect.md)
+* [Oracle Cloud Infrastructure](lumen-cloud-connect-what-is-oracle-fastconnect.md)
+* [IBM Cloud](lumen-cloud-connect-what-is-ibm-cloud.md)
 
 ### Procedure to Configure Lumen Cloud Connect
 
